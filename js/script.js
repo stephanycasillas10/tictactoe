@@ -1,8 +1,10 @@
+let player1 =  "x"; 
+let numturns = 0;
 
-
-
-
-
+let gameover = false;
+function performLogic(buttonId,tileId) {
+    $(buttonId).hide();
+}
 
 
 $("#button1").click(function() {
