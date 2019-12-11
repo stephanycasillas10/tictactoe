@@ -1,13 +1,32 @@
-let player1 =  "x"; 
+let currentPlayer =  "o"; 
 let numturns = 0;
-
 let gameover = false;
+
 function performLogic(buttonId,tileId) {
     $(buttonId).hide();
+    $(tileId).text(currentPlayer);
+    if (currentPlayer === 'x') {
+        currentPlayer = 'o'
+    } else {
+        currentPlayer = 'x'
+    }
+     numturns ++;
+     alternatePlayer();
 }
+
+// function alternatePlayer(){
+//      if (numturns=== 1 || numturns=== 3 || numturns===5 || numturns===7 || numturns=== 9){
+//        currentPlayer = "o"
+//      }
+//      if (numturns= 2,4,6,8,10){
+//          currentPlayer = "x"
+//      }
+//      console.log("If this function is being run, show me " + currentPlayer)
+//  }
 
 
 $("#button1").click(function() {
+    
     performLogic("#button1","#tile1");
 });
 
